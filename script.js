@@ -1,6 +1,7 @@
 function startTimer() {
-    alert("Pomodoro Timer will be added soon!");
+  alert("Pomodoro Timer feature coming soon!");
 }
+
 function scrollToTechniques() {
-    document.getElementById("techniques").scrollIntoView({ behavior: 'smooth' });
+  document.getElementById("techniques").scrollIntoView({ behavior: "smooth" });
 }
