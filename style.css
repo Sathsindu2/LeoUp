@@ -1,52 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  background: #0f0f0f;
+  color: #f0f0f0;
+  overflow-x: hidden;
+  position: relative;
 }
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, #1c1c1c, #000);
+  z-index: -1;
+}
+
 header {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
 }
+
+header h1 {
+  font-size: 3rem;
+  color: #00f6ff;
+  text-shadow: 0 0 20px #00f6ff;
+}
+
 .slogan {
-    font-style: italic;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  text-shadow: 0 0 10px #0ff;
 }
+
 .hero {
-    text-align: center;
-    padding: 2rem 1rem;
+  text-align: center;
+  padding: 2rem;
 }
-.tools {
-    padding: 1rem;
-    text-align: center;
+
+.hero h2 {
+  color: #ff00cc;
+  text-shadow: 0 0 20px #ff00cc;
+  font-size: 2rem;
 }
-.tool-buttons button {
-    margin: 0.5rem;
-    padding: 1rem;
-    border: none;
-    background-color: #2196f3;
-    color: white;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
+
+.tools-section {
+  padding: 2rem;
+  text-align: center;
 }
-.tool-buttons button:hover {
-    background-color: #1976d2;
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
-.techniques {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    margin: 1rem auto;
-    max-width: 600px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #0ff3;
+  text-shadow: 0 0 5px #0ff;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
+
+.tool-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00f6ff;
+}
+
+.techniques-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #333;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.techniques-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.techniques-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.techniques-section li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #333;
+}
+
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+  background: #111;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+.fade-up {
+  animation: fadeIn 2s ease-out;
 }
